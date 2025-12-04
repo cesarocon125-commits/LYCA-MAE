@@ -1,0 +1,119 @@
+/* GENERAL STYLES */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe6f0; /* soft pink */
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER & NAV */
+header {
+  background-color: #ff66b2;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header h1 {
+  color: white;
+  margin: 0;
+}
+nav a {
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #fff0f5;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 40px;
+  text-align: center;
+}
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff3399;
+  animation: fadeIn 1s ease-in;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* CONTACT FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, textarea {
+  padding: 12px;
+  border: 2px solid #ff66b2;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff3399;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #ff1a75;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* FOOTER */
+footer {
+  background-color: #ff66b2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .image-section {
+    flex-direction: column;
+  }
+}
